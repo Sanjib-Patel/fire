@@ -2,7 +2,9 @@
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/bitmaps/nnue-gui.png)
 
-**fire self-play nnue** (code soon available in Hindi & Japanese)
+**fire self-play nnue** (code & comments now available in Hindi)
+
+phaayar 9 (hindee) ke lie krpaya mujhase nijee taur par sampark karen
 
 ## features
 - c++20
@@ -28,6 +30,8 @@
  (Monte Carlo Tree Search w/ Upper Confidence Bounds Applied to Trees) pure/no minmax
 
 **fire-9 is now available**
+
+
 
 |                                       |    |       |                    |      |
 | ------------------------------------- |--- | ----- | ------------------ | ---- |
