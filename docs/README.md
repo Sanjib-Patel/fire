@@ -2,10 +2,7 @@
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/bitmaps/nnue-gui.png)
 
-**fire self-play nnue**
-
-- fire without NNUE can be found here: https://github.com/FireFather/fire-HCE (archived, no longer actively maintained)
-- fire w/ NNUE from shared SF & LC0 data: https://github.com/FireFather/fire-NN (archived, no longer actively maintained)
+**fire self-play nnue** (code soon available in Hindi & Japanese)
 
 ## features
 - c++20
@@ -101,7 +98,7 @@ Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.
   - [improving-the-nnue.md](improving-the-nnue.md)
 
 ## monte-carlo search mode:  
-![alt tag](https://raw.githubusercontent.com/FireFather/fire-NN/master/docs/Fire_8.NN.MCx64.png)
+![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/Fire_8.NN.MCx64.png)
 
 fire-9 has undergone months of meticulous analysis and refactoring using many of the most modern C++ tools available today, including Clang, ReSharper C++, and Visual Studio Code Analysis, ensuring the production of extremely fast highly optimized and stable executables.
 
@@ -152,6 +149,9 @@ please see **http://chesslogik.wix.com/fire** for more info
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_11.bmp)
 
 ## acknowledgements
+
+**hindee kod anuvaad par kaam karane ke lie dhanyavaad sanjeeb patel!**
+
 many of the ideas & techiques incorporated into Fire are documented in detail here
 - [Chess Programming Wiki](https://www.chessprogramming.org)
 
@@ -183,10 +183,10 @@ Fire is distributed under the GNU General Public License. Please read LICENSE fo
 
 please see **http://chesslogik.wix.com/fire** for more info
 
-## Does Fire-NN play like Stockfish? 
+## Does Fire play like Stockfish? 
 No. Here are the results of Don Daily's SIM program (default values) today to measure Fire 8.NN move selection vs the last 4 versions of Stockfish:
 
-![alt tag](https://raw.githubusercontent.com/FireFather/fire-NN/master/docs/matrix.png)
+![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/matrix.png)
 
 As you can see Stockfish 14.1 and Stockfish 15 make the same moves ~64% of the time (see row 4, column 5)
 
