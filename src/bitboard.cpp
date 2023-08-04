@@ -1,14 +1,14 @@
 /*
-  Fire is a freeware UCI chess playing engine authored by Norman Schmidt.
-  Fire utilizes many state-of-the-art chess programming ideas and techniques
-  which have been documented in detail at https://www.chessprogramming.org/
-  and demonstrated via the very strong open-source chess engine Stockfish...
-  https://github.com/official-stockfish/Stockfish.
-  Fire is free software: you can redistribute it and/or modify it under the
-  terms of the GNU General Public License as published by the Free Software
-  Foundation, either version 3 of the License, or any later version.
-  You should have received a copy of the GNU General Public License with
-  this program: copying.txt.  If not, see <http://www.gnu.org/licenses/>.
+  phaayar norman schmidt dvaara likhit ek phreeveyar yooseeaee shataranj khelane vaala injan hai.
+  phaayar kaee atyaadhunik shataranj prograaming vichaaron aur takaneekon ka upayog karata hai
+  jise https://www.chessprogramming.org/ par vistaar se pralekhit kiya gaya hai
+  aur bahut majaboot opan-sors shataranj injan stokaphish ke maadhyam se pradarshit kiya gaya...
+  https://github.com/official-stockfish/stockfish.
+  phaayar muft softaveyar hai: aap ise punarvitarit kar sakate hain aur/ya isake antargat sanshodhit kar sakate hain
+  phree sophtaveyar dvaara prakaashit jeeenayoo janaral pablik laisens kee sharten
+  phaundeshan, ya to laisens ka sanskaran 3, ya koee baad ka sanskaran.
+  aapako jeeenayoo janaral pablik laisens kee ek prati praapt honee chaahie
+  yah prograam: copying.txt. yadi nahin, to <http://www.gnu.org/licenses/> dekhen.
 */
 #include "bitboard.h"
 #include "fire.h"
