@@ -122,7 +122,6 @@ namespace material {
 			pos.number(black, pt_pawn), pos.number(black, pt_knight), pos.number(black, pt_bishop),
 			popcnt(pos.pieces(black, pt_bishop) & ~dark_squares), popcnt(pos.pieces(black, pt_bishop) & dark_squares),
 			pos.number(black, pt_rook), pos.number(black, pt_queen));
-		hash_entry->value_function_index = thread_pool.end_games.probe_value(pos.material_key());
 		if (hash_entry->value_function_index >= 0) return hash_entry;
 		for (auto color = white; color <= black; ++color)
 			if (!more_than_one(pos.pieces(~color)) && pos.non_pawn_material(color) >= mat_rook)
@@ -130,13 +129,6 @@ namespace material {
 				hash_entry->value_function_index = color == white ? 0 : 1;
 				return hash_entry;
 			}
-		auto strong_side = num_sides;
-		if (const auto scale_factor = thread_pool.end_games.probe_scale_factor(pos.material_key(), strong_side);
-			scale_factor >= 0)
-		{
-			hash_entry->scale_function_index[strong_side] = scale_factor;
-			return hash_entry;
-		}
 		for (auto color = white; color <= black; ++color)
 		{
 			if (pos.non_pawn_material(color) == mat_bishop && pos.number(color, pt_bishop) == 1 && pos.number(color, pt_pawn) >= 1)

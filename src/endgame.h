@@ -24,19 +24,10 @@ using endgame_value = int(*)(const position& pos);
 using endgame_scale_factor = sfactor(*)(const position& pos);
 class endgames
 {
-	void add_value(const char* pieces, endgame_value, endgame_value);
-	void add_scale_factor(const char* pieces, endgame_scale_factor, endgame_scale_factor);
 	using function_index_map = std::map<uint64_t, int>;
-	int value_number_ = 0;
-	int factor_number_ = 0;
 	function_index_map map_value_;
 	function_index_map map_scale_factor_;
 public:
-	endgames();
-	void init_endgames();
-	void init_scale_factors();
-	int probe_value(uint64_t key);
-	int probe_scale_factor(uint64_t key, side& strong_side);
 	endgame_value value_functions[16] = {};
 	endgame_scale_factor factor_functions[32] = {};
 };
@@ -44,8 +35,7 @@ inline constexpr int value_tempo = 24;
 inline constexpr uint64_t black_modifier = 0xa4489c56;
 inline constexpr uint64_t averbakh_rule = 0xfff7e3c180000000;
 namespace endgame {
-	square normalize_pawn_side(const position& pos, side strong_side, square sq);
-	uint64_t attack_king_inc(square s);
+
 	inline constexpr int push_to_side[num_squares] =
 	{
 		80, 72, 64, 56, 56, 64, 72, 80,
@@ -71,9 +61,3 @@ namespace endgame {
 	inline constexpr int draw_closer[8] = { 0, 0, 80, 64, 48, 32, 16, 8 };
 	inline constexpr int krppkrp_scale_factors[num_ranks] = { 0, 14, 16, 22, 33, 69, 0, 0 };
 }
-template <side strong>int endgame_kxk(const position& pos);
-template <side strong>sfactor endgame_kbpk(const position& pos);
-template <side strong>sfactor endgame_kqkrp(const position& pos);
-template <side strong>sfactor endgame_kpk(const position& pos);
-template <side strong>sfactor endgame_kpkp(const position& pos);
-inline int value_of_material(int val);
