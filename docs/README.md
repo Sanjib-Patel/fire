@@ -4,6 +4,8 @@
 
 **fire self-play nnue** (poora kod aur tippaniyaan jald hee hindee mein upalabdh hongee)
 
+**Main ābhārī hōṅ firefather https://github.com/FireFather/fire**
+
 ## visheshataen
 - c++20
 - vindoz aur linaks
