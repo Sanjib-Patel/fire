@@ -184,7 +184,7 @@ ke antargat agni ka vitaran kiya jaata haiGNU General Public License. krpaya pad
 krpaya dekhen **http://chesslogik.wix.com/fire** adhik jaanakaaree ke lie
 
 ## kya aag stockfish kee tarah khelatee hai?
-nahin, yahaan parinaam hain Don Daily's SIM kaaryakram (difolt maan) ko maapane ke lie aaj Fire 8.NN chayan banaam pichhale 4 sanskaranon ko sthaanaantarit karenStockfish:
+nahin, yahaan parinaam hain Don Daily's SIM kaaryakram (difolt maan) ko maapane ke lie aaj Fire 8.NN chayan banaam pichhale 4 sanskaranon ko sthaanaantarit karen Stockfish:
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/matrix.png)
 
