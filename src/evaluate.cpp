@@ -15,27 +15,27 @@
 #include "fire.h"
 #include "nnue/nnue.h"
 #include "pragma.h"
-namespace evaluate {
+	namespace evaluate {
 	/*
-	* Piece codes are
-	*     wking=1, wqueen=2, wrook=3, wbishop= 4, wknight= 5, wpawn= 6,
-	*     bking=7, bqueen=8, brook=9, bbishop=10, bknight=11, bpawn=12,
+	* tukada kod hain
+	* wking=1, wquaiain=2, wrook=3, wbishop= 4, wknight= 5, wpawn= 6,
+	* beeking=7, beekveen=8, brook=9, beebeeshop=10, beekenait=11, beepeeeen=12,
 	*
-	* Squares are
-	*     A1=0, B1=1 ... H8=63
+	* varg hain
+	* e1=0, bee1=1 ... echa8=63
 	*
-	* Input format:
-	*     piece[0] is white king, square[0] is its location
-	*     piece[1] is black king, square[1] is its location
-	*     ..
-	*     piece[x], square[x] can be in any order
-	*     ..
-	*     piece[n+1] is set to 0 to represent end of array
+	* inaput praaroop:
+	* tukada [0] saphed raaja hai, varg [0] usaka sthaan hai
+	* tukada [1] kaala raaja hai, varg [1] isaka sthaan hai
+	* ..
+	* tukada[x], varg[x] kisee bhee kram mein ho sakata hai
+	* ..
+	* tukada[n+1] saranee ke ant ko darshaane ke lie 0 par set hai
 	*
-	* Returns
-	*   Score relative to side to move in approximate centipawns
+	* ritarn
+	* anumaanit senteepons mein sthaanaantarit karane ke lie paksh ke saapeksh skor
 	*/
-	// builds pieces & squares arrays as required by nnue specs above
+	// uparokt enenayoo vinirdeshon ke anusaar aavashyakataanusaar tukade aur varg saaranee banaata hai
 	int eval_nnue(const position& pos)
 	{
 		int pieces[33]{};
