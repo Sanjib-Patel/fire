@@ -17,7 +17,7 @@
 #include "macro/rank.h"
 #include "macro/side.h"
 #include "macro/square.h"
-// init all bitboard arrays
+// sabhee bitabord aire ko init karen
 void bitboard::init()
 {
 	for (auto sq = a1; sq <= h8; ++sq)square_bb[sq] = 1ULL << sq;
@@ -74,9 +74,9 @@ void bitboard::init()
 			}
 	}
 }
-// init_magic_bb() calculates all rook and bishop attacks. 
-// the bitboards are used to look up sliding piece attacks
-// If the system supports BMI2 (Bit Manipulation Instruction Set 2), specifically Parallel bit extract, then use:
+// init_magich_bb() sabhee rook aur bishap hamalon kee ganana karata hai.
+// bitabord ka upayog slaiding pees hamalon ko dekhane ke lie kiya jaata hai
+// yadi sistam bmi2 (bit mainipuleshan instrakshan set 2), vishesh roop se samaanaantar bit eksatraikt ka samarthan karata hai, to isaka upayog karen:
 #ifdef USE_PEXT
 void init_magic_bb_pext(uint64_t* attack, uint64_t* square_index[], uint64_t* mask, const int deltas[4][2])
 {
@@ -95,7 +95,7 @@ void init_magic_bb_pext(uint64_t* attack, uint64_t* square_index[], uint64_t* ma
 	}
 }
 #else
-// otherwise use this function, which is only slightly slower (1-2%) on an Intel® Core™ i9-9900K @3.60ghz
+// anyatha is fankshan ka upayog karen, jo intail® chorai™ i9-9900k @3.60ghz par keval thoda dheema (1-2%) hai
 void init_magic_bb(uint64_t* attack, const int attack_index[], uint64_t* square_index[], uint64_t* mask,
 	const int shift, const uint64_t mult[], const int deltas[4][2])
 {

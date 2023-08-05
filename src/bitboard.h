@@ -117,7 +117,7 @@ inline uint64_t pawnattack[num_sides][num_squares];
 inline uint64_t empty_attack[num_piecetypes][num_squares];
 inline uint64_t king_zone[num_squares];
 namespace kpk { bool probe(square wk_sq, square wp_sq, square bk_sq, side me); }
-// arrays of file & rank bitboards
+// fail aur raink bitabord kee saaranee
 inline constexpr uint64_t file_bb[num_files] = { file_a_bb, file_b_bb, file_c_bb, file_d_bb, file_e_bb, file_f_bb, file_g_bb, file_h_bb };
 inline constexpr uint64_t rank_bb[num_ranks] = { rank_1_bb, rank_2_bb, rank_3_bb, rank_4_bb, rank_5_bb, rank_6_bb, rank_7_bb, rank_8_bb };
 template <square Delta>uint64_t shift_bb(const uint64_t b)
@@ -146,52 +146,52 @@ inline constexpr int bishop_deltas[4][2] =
 	{1, -1},
 	{-1, -1}
 };
-// bitboard representations of multiple squares
+// ekaadhik vargon ka bitabord pratinidhitv
 constexpr uint64_t bb(const square s) { return 1ULL << s; }
 inline uint64_t bb2(const square s1, const square s2) { return 1ULL << s1 | 1ULL << s2; }
 inline uint64_t bb3(const square s1, const square s2, const square s3) { return 1ULL << s1 | 1ULL << s2 | 1ULL << s3; }
 inline uint64_t bb4(const square s1, const square s2, const square s3, const square s4) { return 1ULL << s1 | 1ULL << s2 | 1ULL << s3 | 1ULL << s4; }
-// bitwise operator AND for bitboards (64-bit unsigned integers)
+// bitavaiz oparetar aur bitabord ke lie (64-bit ahastaaksharit poornaank)
 inline uint64_t operator&(const uint64_t b, const square sq) { return b & bb(sq); }
-// bitwise operator inclusive OR for bitboards 
+// bitavaiz oparetar samaaveshee ya bitabord ke lie 
 inline uint64_t operator|(const uint64_t b, const square sq) { return b | bb(sq); }
-// bitwise operator XOR (exclusive OR) for bitboards 
+// bitabord ke lie bitavaiz oparetar xor (anany or)।
 inline uint64_t operator^(const uint64_t b, const square sq) { return b ^ bb(sq); }
-// compound bitwise operator OR for bitboards 
+// kampaund bitavaiz oparetar ya bitabord ke lie 
 inline uint64_t& operator|=(uint64_t& b, const square sq) { return b |= bb(sq); }
-// compound bitwise operator XOR for bitboards 
+// bitabord ke lie kampaund bitavaiz oparetar xor 
 inline uint64_t& operator^=(uint64_t& b, const square sq) { return b ^= bb(sq); }
 inline bool more_than_one(const uint64_t b) { return b & b - 1; }
-// returns a bitboard for complete rank given a specific sq
+// ek vishisht varg ko dekhate hue poorn raink ke lie ek bitabord lautaata ha
 inline uint64_t get_rank(const square sq) { return rank_bb[rank_of(sq)]; }
-// returns a bitboard for complete file given a specific sq
+// ek vishisht varg dee gaee sampoorn fail ke lie ek bitabord lautaata hai
 inline uint64_t get_file(const square sq) { return file_bb[file_of(sq)]; }
-// returns a bitboard for complete file given a specific file
+// ek vishisht fail ko dekhate hue pooree fail ke lie ek bitabord lautaata hai
 inline uint64_t get_file(const file f) { return file_bb[f]; }
-// returns a bitboard for adjacent file given a specific file
+// ek vishisht fail dee gaee aasann fail ke lie ek bitabord lautaata hai
 inline uint64_t get_adjacent_files(const file f) { return adjacent_files_bb[f]; }
-// returns a bitboard for squares between 2 specific squares
+// 2 vishisht vargon ke beech ke vargon ke lie ek bitabord lautaata hai
 inline uint64_t get_between(const square square1, const square square2) { return between_bb[square1][square2]; }
-// returns a bitboard for ranks in front
+// saamane raink ke lie ek bitabord lautaata hai
 inline uint64_t ranks_forward_bb(const side color, const rank r) { return ranks_in_front_bb[color][r]; }
 inline uint64_t ranks_forward_bb(const side color, const square sq) { return ranks_in_front_bb[color][rank_of(sq)]; }
 inline uint64_t forward_bb(const side color, const square sq) { return in_front_bb[color][sq]; }
 inline uint64_t pawn_attack_range(const side color, const square sq) { return pawn_attack_span[color][sq]; }
-// does sq contain a passed pawn?
+// kya sq mein paarit mohara shaamil hai?
 inline uint64_t passedpawn_mask(const side color, const square sq) { return passed_pawn_mask[color][sq]; }
-// returns a bitboard representing aligned squares (straight or diagonal)
+// sanrekhit vargon (seedhe ya vikarn) ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline bool aligned(const square square1, const square square2, const square square3) { return connection_bb[square1][square2] & square3; }
-// returns a bitboard representing the distance between 2 specific squares
+// 2 vishisht vargon ke beech kee dooree ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline int distance(const square x, const square y) { return square_distance[x][y]; }
-// returns a bitboard representing the file distance between 2 specific squares
+// 2 vishisht vargon ke beech fail kee dooree ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline int file_distance(const square x, const square y) { return abs(file_of(x) - file_of(y)); }
-// returns a bitboard representing the rank distance between 2 specific squares
+// 2 vishisht vargon ke beech raink dooree ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline int rank_distance(const square x, const square y) { return abs(rank_of(x) - rank_of(y)); }
-// returns a bitboard representing the color of the sq in front
+// saamane varg ke rang ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline square front_square(const side color, const uint64_t b) { return color == white ? msb(b) : lsb(b); }
-// returns a bitboard representing the color of the sq behind
+// peechhe ke varg ke rang ka pratinidhitv karane vaala ek bitabord lautaata hai
 inline square rear_square(const side color, const uint64_t b) { return color == white ? lsb(b) : msb(b); }
-// bishop attack macro
+// bishap hamala maikro
 inline uint64_t attack_bishop_bb(const square sq, const uint64_t occupied) {
 #ifdef USE_PEXT
 	return bishop_attack_table[sq][pext(occupied, bishop_mask[sq])];
@@ -199,7 +199,7 @@ inline uint64_t attack_bishop_bb(const square sq, const uint64_t occupied) {
 	return bishop_attack_table[sq][((occupied & bishop_mask[sq]) * bitboard::bishop_magics[sq]) >> 55];
 #endif
 }
-// rook attack macro
+// rook ataik maikro
 inline uint64_t attack_rook_bb(const square sq, const uint64_t occupied)
 {
 #ifdef USE_PEXT
@@ -248,7 +248,7 @@ uint64_t shift_up_right(const uint64_t bb)
 	if constexpr (Color == white) return shift_bb<north_east>(bb);
 	else return shift_bb<south_east>(bb);
 }
-// clear least significant bit
+// kam se kam mahatvapoorn bit saaf karen
 inline square pop_lsb(uint64_t* b)
 {
 	const auto sq = lsb(*b);
