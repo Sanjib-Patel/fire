@@ -30,13 +30,13 @@ namespace search {
 		if (param.use_time_calculating())
 			time_control.adjustment_after_ponder_hit();
 	}
-	// alpha-beta pruning utilizing minimax algorithm, effectively eliminating 'unpromising' branches of the search tree...
-	// search time is consequently limited to a 'more promising' subtree, resulting in deeper searches
+	// minimaiks elgorithm ka upayog karate hue alpha-beeta prooning, khoj vrksh kee apratyaashit shaakhaon ko prabhaavee dhang se samaapt karata hai...
+	// parinaamasvaroop khoj samay adhik aashaajanak up-vrksh tak seemit ho jaata hai, jisake parinaamasvaroop gaharee khojen hotee hain
 	template <nodetype Nt>
 	int alpha_beta(position& pos, int alpha, int beta, int depth, bool cut_node)
 	{
-		// search constants (can be easily convert int global variables for tuning w/ CLOP, etc.)
-		// these values have only been roughly hand tuned
+	// khoj sthiraank (tyooning w/ clop, aadi ke lie aasaanee se int vaishvik char parivartit kiya ja sakata hai)
+	// in moolyon ko keval mote taur par haath se tyoon kiya gaya ha
 		constexpr auto null_move_tempo_mult = 2;
 		constexpr auto null_move_strong_threat_mult = 8;
 		constexpr auto null_move_pos_val_less_than_beta_mult = 12;
@@ -661,9 +661,9 @@ namespace search {
 			counter_move_bonus[d] = static_cast<int>(std::min(8192, counter_move_bonus_value * (d * d + 2 * d - 2)));
 		}
 	}
-	// start at the leaf nodes of the main search and resolve all tactics/capture moves in "quiet" positions.
-	// extend search at all unstable nodes & perform an extension of the evaluation function in order to obtain a static
-	// evaluation ... greatly mitigating the effect of the horizon problem.
+	// mukhy khoj ke leeph nods se shuroo karen aur sabhee rananeeti/kabja chaalon ko "shaant" sthiti mein hal karen.
+	// sabhee asthir nods par khoj ka vistaar karen aur ek sthir praapt karane ke lie moolyaankan fankshan ka vistaar karen
+	// moolyaankan ... kshitij samasya ke prabhaav ko kaaphee had tak kam karata hai.
 	template <nodetype Nt, bool StateCheck>
 	int q_search(position& pos, int alpha, const int beta, const int depth)
 	{

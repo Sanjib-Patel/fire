@@ -24,7 +24,7 @@
 #include "thread.h"
 #include "util/perft.h"
 #include "util/util.h"
-// stop threads, reset search
+// thred roken, khoj reeset karen
 void new_game()
 {
 	search::signals.stop_analyzing = true;
@@ -32,7 +32,7 @@ void new_game()
 	thread_pool.main()->wait_for_search_to_end();
 	search::reset();
 }
-// initialize system
+// sistam praarambh karen
 int init(const int hash_size)
 {
 	thread_pool.start = now();
@@ -45,7 +45,7 @@ int init(const int hash_size)
 	const char* filename = uci_nnue_evalfile.c_str();
 	return nnue_init(filename);
 }
-// create infinite loop while parsing for UCI input stream tokens (words)
+// yooseeaee inaput streem tokan (shabd) ke lie paarsing karate samay anant loop banaen
 void uci_loop(const int argc, char* argv[])
 {
 	position pos{};
@@ -55,14 +55,14 @@ void uci_loop(const int argc, char* argv[])
 	for (auto i = 1; i < argc; ++i)	cmd += std::string(argv[i]) + " ";
 	do
 	{
-		// read cmd 'bench' if present, for automated external PGO compile
+		// svachaalit baaharee peejeeo sankalan ke lie, yadi maujood hai to seeemadee bench padhen
 		if (argc == 1 && !getline(std::cin, cmd))cmd = "quit";
 		cmd = trim(cmd);
 		if (cmd.empty()) continue;
 		std::istringstream is(cmd);
 		token.clear();
 		is >> std::skipws >> token;
-		// check for significant UCI tokens
+		// mahatvapoorn yooseeaee tokan kee jaanch karen
 		if (token == "uci")
 		{
 			acout() << "id name " << version << std::endl;
@@ -97,10 +97,10 @@ void uci_loop(const int argc, char* argv[])
 		else if (token == "bench") { auto bench_depth = is >> token ? token : "16"; bench_active = true; bench(stoi(bench_depth)); bench_active = false; }
 		else {}
 	} while (token != "quit" && argc == 1);
-	// if loop is broken with 'quit', exit and destroy thread pool
+	// yadi loop chhoden se toot gaya hai, to baahar nikalen aur thred pool ko nasht kar den
 	thread_pool.exit();
 }
-// read input stream and parse for meaningful UCI options
+// saarthak yooseeaee vikalpon ke lie inaput streem padhen aur paars karen
 void set_option(std::istringstream& is)
 {
 	std::string token;
@@ -123,7 +123,7 @@ void set_option(std::istringstream& is)
 				is >> token;
 				is >> token;
 				uci_threads = stoi(token);
-				//hack to bypass 1 thread mcts
+				// 1 thred emaseeteees ko baayapaas karane ke lie haik karen
 				if (uci_threads == 1 && uci_mcts == true)uci_threads = 2;
 				thread_pool.change_thread_count(uci_threads);
 				if (uci_threads == 1)acout() << "info string Threads " << uci_threads << " thread" << std::endl;
@@ -246,8 +246,8 @@ void set_option(std::istringstream& is)
 		}
 	}
 }
-// read input stream for 'go' parameters
-// including time and inc, etc.
+// go pairaameetar ke lie inaput streem padhen
+// samay aur ink aadi sahit.
 void go(position& pos, std::istringstream& is)
 {
 	if (uci_threads == 1 && uci_mcts == true) { acout() << "info string MCTS requires > 1 thread " << std::endl; exit(EXIT_SUCCESS); }
@@ -269,7 +269,7 @@ void go(position& pos, std::istringstream& is)
 	if (engine_mode == "random")random(pos);
 	else thread_pool.begin_search(pos, param);
 }
-// convert fen to internal position representation
+//fen ko aantarik sthiti pratinidhitv mein parivartit karen
 void set_position(position& pos, std::istringstream& is)
 {
 	uint32_t move;
