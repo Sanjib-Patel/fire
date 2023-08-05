@@ -1,10 +1,10 @@
-# fire
+# fire 
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/bitmaps/nnue-gui.png)
 
 **fire self-play nnue** (poora kod aur tippaniyaan jald hee hindee mein upalabdh hongee)
 
-## features
+## visheshataen
 - see++20
 - vindoz aur linaks
 - yooseeaee
@@ -27,11 +27,11 @@
 - vaikalpik prayogaatmak emaseeteees-yooseetee khoj
  (monte kaarlo tree sarch w/pedon par laagoo ooparee konphidens baunds) shuddh/koee nyoonatam adhikatam nahin
 
-**fire-9 is now available**
+**fire-9 ab upalabdh hai**
 
 |                                       |    |       |                    |      |
 | ------------------------------------- |--- | ----- | ------------------ | ---- |
-|                                       |    | games |(+win, =draw, -loss)| (%)  |
+|                                       |    | khel |(+jeet, = dra, -haar)| (%)  |
 |    fire-9_x64_bmi2  			|3460| 16384 | (+5968,=4937,-5479)|51.5 %|
 |    vs.                                |     |      |                    |      |
 |    stockfish-15                 	|3861|   863 | (+715,=135,-13)    |90.7 %|
@@ -54,7 +54,7 @@
 |    tucano-10.00                 	|3266|   862 | (+99,=234,-529)    |25.1 %|
 |    marvin-6.0.0                 	|3233|   862 | (+107,=160,-595)   |21.7 %|
 
-Games Completed = 16384 of 16384 (Avg game length = 12.627 sec)
+khel poore hue = 16384 of 16384 (ausat gem kee lambaee = 12.627 sec)
 
 Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.epd(31526)
 
@@ -79,7 +79,7 @@ Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.
 - vividh upayogitaen: trunatai.aixai (buk plaee seema kholana) aur gemasplit.aixai (peejeeen ko kaee bhaagon mein todana)
   - 40H-pgn tools http://40hchess.epizy.com/
 
-## instructions to create an efficiently-updatable neural network (nnue) for any engine:
+## kisee bhee injan ke lie kushalataapoorvak adyatan karane yogy tantrika netavark (nnue) banaane ke nirdesh:
 - ek upayukt vindoz vaataavaran sthaapit karana
   - [windows-environment.md](windows-environment.md)
 - ka upayog karake ek kushal praarambhik pustak banaana cutechess-cli
@@ -97,43 +97,43 @@ Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.
 - paryavekshit aur sudrdheekaran seekhane ke saath sudhaar karana
   - [improving-the-nnue.md](improving-the-nnue.md)
 
-## monte-carlo search mode:  
+## monte-carlo khoj mod:  
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/Fire_8.NN.MCx64.png)
 
 phaayar-9 mein klaing, reeshaarpar see++ aur vijual stoodiyo kod enaalisis sahit aaj upalabdh kaee sabase aadhunik see++ tools ka upayog karake kaee maheenon tak saavadhaaneepoorvak vishleshan aur reephaiktaring kee gaee hai, jisase behad tej, uchch anukoolit aur sthir nishpaadan yogy ka utpaadan sunishchit hota hai.
 
-## available Windows binaries
-- **x64 bmi2** = fast pgo binary (for modern 64-bit systems w/ BMI2 instruction set) if you own a Intel Haswell or newer cpu, this compile should be faster.
-- **x64 avx2** = fast pgo binary (for modern 64-bit systems w/ AVX2 instruction set) if you own a modern AMD cpu, this compile should be the fastest.
+## upalabdh Windows baayaneriz
+- **x64 bmi2** = fast pgo binary (for modern 64-bit systems w/ BMI2 instruction set)yadi aapake paas intel haisavel ya naya seepeeyoo hai, to yah sankalan tez hona chaahie.
+- **x64 avx2** = fast pgo binary (for modern 64-bit systems w/ AVX2 instruction set) yadi aapake paas aadhunik eemadee seepeeyoo hai, to yah sankalan sabase tez hona chaahie.
 - **x64 popc** = fast pgo binary (for older 64-bit systems w/ SSE41 & POPCNT instruction sets) 
 
 - **windows** : fire-9_x64_x64_bmi2.exe, fire-9_x64_avx2.exe, fire-9_x64_popc.exe
 
-run 'bench' at command line to determine which binary runs best/fastest on your system. for greater accuracy, run it twice and calculate the average of both results.
+yah nirdhaarit karane ke lie ki aapake sistam par kaun sa bainaree sabase achchha/tez chalata hai, kamaand lain par bench chalaen. adhik sateekata ke lie, ise do baar chalaen aur donon parinaamon ke ausat kee ganana karen.
 
-please see **http://chesslogik.wix.com/fire** for more info
+krpaya dekhen **http://chesslogik.wix.com/fire** adhik jaanakaaree ke lie
 
-## compile it yourself
-- **windows** (visual studio) use included project files: Fire.vcxproj or Fire.sln
-- **minGW** run one of the included shell scripts: make_bmi2.sh, make_avx2.sh, make_popc.sh, or make_all.sh 
+## ise svayan sankalit karen
+- **windows** (visual studio) sammilit projekt failon ka upayog karen: Fire.vcxproj or Fire.sln
+- **minGW** shaamil shel skript mein se ek chalaen: make_bmi2.sh, make_avx2.sh, make_popc.sh, or make_all.sh 
 - **ubuntu** type 'make profile-build ARCH=x86-64-bmi2', 'make profile-build ARCH=x86-64-avx2', etc.
 
-## uci options
-- **Hash** size of the hash table. default is 64 MB.
-- **Threads** number of processor threads to use. default is 1, max = 128.
-- **MultiPV** number of pv's/principal variations (lines of play) to be output. default is 1.
-- **Contempt** higher contempt resists draws.
-- **MoveOverhead** Adjust this to compensate for network and GUI latency. This is useful to avoid losses on time.
-- **MinimumTime** Absolute minimum time (in ms) to spend on a single move. Also useful to avoid losses on time.
-- **Ponder** also think during opponent's time. default is false.
-- **UCI_Chess960** play chess960 (often called FRC or Fischer Random Chess). default is false.
-- **Clear Hash** clear the hash table. delete allocated memory and re-initialize.
-- **SyzygyProbeDepth** engine begins probing at specified depth. increasing this option makes the engine probe less.
-- **EngineMode** choose NNUE (default), or random.
-- **MCTS** enable Monte Carlo Tree Search w/UCT (Upper Confidence Bounds Applied to Trees)
-- **SyzygyProbeLimit** number of pieces that have to be on the board in the endgame before the table-bases are probed.
-- **Syzygy50MoveRule** set to false, tablebase positions that are drawn by the 50-move rule will count as a win or loss.
-- **SyzygyPath** path to the syzygy tablebase files.
+## uci vikalp
+- **Hash** haih taalika ka aakaar. difolt hai 64 MB.
+- **Threads** upayog karane ke lie prosesar threds kee sankhya. difolt 1 hai, adhikatam = 128.
+- **MultiPV** aautaput ke lie peevee/pramukh vividhataon (khel kee panktiyaan) kee sankhya. difolt hai 1.
+- **Contempt** uchchatar avamaanana ​​dro ka virodh karatee hai.
+- **MoveOverhead** netavark aur jeeyooaee vilambata kee bharapaee ke lie ise samaayojit karen. samay par nukasaan se bachane ke lie yah upayogee hai.
+- **MinimumTime** ek hee chaal par kharch karane ke lie poorn nyoonatam samay (emes mein). samay par hone vaale nukasaan se bachane ke lie bhee upayogee hai.
+- **Ponder** virodhee ke samay bhee socho. difolt galat hai.
+- **UCI_Chess960** shataranja960 khelen (aksar ephaarasee ya Fischer Random Shataranj kaha jaata hai). difolt galat hai.
+- **Clear Hash** hash taalika saaf karen. aavantit memoree hataen aur punah aarambh karen.
+- **SyzygyProbeDepth** injan nirdisht gaharaee par jaanch shuroo karata hai. is vikalp ko badhaane se injan jaanch kam ho jaatee hai.
+- **EngineMode** NNUE(difolt), ya yaadrchchhik chunen.
+- **MCTS** saksham monte kaarlo tree sarch w/ucht (pedon par laagoo ooparee konphidens baunds)
+- **SyzygyProbeLimit** tebal-bes kee jaanch se pahale gem ke ant mein bord par hone vaale tukadon kee sankhya.
+- **Syzygy50MoveRule** galat par set, 50-chaal niyam dvaara kheenchee gaee tebalabes sthiti ko jeet ya haar ke roop mein gina jaega.
+- **SyzygyPath** syzygy tebalabes failon ka path.
 
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_1.bmp)
@@ -148,17 +148,17 @@ please see **http://chesslogik.wix.com/fire** for more info
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_10.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_11.bmp)
 
-## acknowledgements
+## aabhaar
 
 **hindee kod anuvaad par kaam karane ke lie dhanyavaad sanjeeb patel!**
 
-many of the ideas & techiques incorporated into Fire are documented in detail here
+phaayar mein shaamil kaee vichaaron aur takaneekon ko yahaan vistaar se pralekhit kiya gaya hai
 - [Chess Programming Wiki](https://www.chessprogramming.org)
 
-and some have been adapted from the super strong open-source chess engine
+aur kuchh ko supar majaboot opan-sors shataranj injan se anukoolit kiya gaya hai
 - [Stockfish](https://github.com/official-stockfish/Stockfish)
 
-and others
+aur doosare
 - [Ippolit](https://github.com/FireFather/ippolit)
 - [Robbolito](https://github.com/FireFather/robbolito)
 - [Firebird](https://github.com/FireFather/firebird)
@@ -166,39 +166,39 @@ and others
 - [Houdini](https://www.cruxis.com/chess/houdini.htm)
 - [Gull](https://github.com/FireFather/seagull)
 
-the endgame table bases are implemented using code adapted from Ronald de Man's
+endagem taalika aadhaaron ko anukoolit kod ka upayog karake kaaryaanvit kiya jaata hai Ronald de Man's
 - [Syzygy EGTBs & probing code](https://github.com/syzygy1/tb)
 
-The NNUE implementation utilizes a modified version of Daniel Shawul's/Cfish excellent nnue probe code:
+enenayooee kaaryaanvayan ek sanshodhit sanskaran ka upayog karata haiDaniel Shawul's/Cfish utkrsht nnu jaanch kod
 - [nnue-probe](https://github.com/dshawul/nnue-probe/)
 
-the MCTS implementation is derived from Stephane Nicolet's work
+mcts kaaryaanvayan se liya gaya hai Stephane Nicolet's kaam
 - https://github.com/snicolet/Stockfish/commits/montecarlo
 
-if you are interested in learning about my particular ultra-fast testing methodology, I've explained it in some detail here:
+yadi aap meree vishesh altra-phaast pareekshan paddhati ke baare mein jaanane mein ruchi rakhate hain, to mainne ise yahaan kuchh vistaar se samajhaaya hai:
 http://www.chessdom.com/fire-the-chess-engine-releases-a-new-version/
 
-## license
-Fire is distributed under the GNU General Public License. Please read LICENSE for more information.
+## laisens
+ke antargat agni ka vitaran kiya jaata haiGNU General Public License. krpaya padhen LICENSE adhik jaanakaaree ke lie.
 
-please see **http://chesslogik.wix.com/fire** for more info
+krpaya dekhen **http://chesslogik.wix.com/fire** adhik jaanakaaree ke lie
 
-## Does Fire play like Stockfish? 
-No. Here are the results of Don Daily's SIM program (default values) today to measure Fire 8.NN move selection vs the last 4 versions of Stockfish:
+## kya aag stockfish kee tarah khelatee hai?
+nahin, yahaan parinaam hain Don Daily's SIM kaaryakram (difolt maan) ko maapane ke lie aaj Fire 8.NN chayan banaam pichhale 4 sanskaranon ko sthaanaantarit karenStockfish:
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/matrix.png)
 
-As you can see Stockfish 14.1 and Stockfish 15 make the same moves ~64% of the time (see row 4, column 5)
+Aaap dekh sakate hain ki stockfish 14.1 aur stockfish 15 ~64% samay mein samaan chaal chalate hain (dekhana pankti 4, kolam 5)
 
-Fire 8.NN has an excellent score of ~43.34 % (see row 1), making different moves than SF almost 60% of the time.
+Fire 8.NN ka utkrsht skor ~43.34% hai (pankti 1 dekhen), jo lagabhag 60% samay mein eseph se bhinn chaalen banaata hai.
 
-The Sim tool can be downloaded here:
+sim tool yahaan se daunalod kiya ja sakata hai:
 https://komodochess.com/downloads.htm
 
-If you're interested in similarity testing results, see also:
+yadi aap samaanata pareekshan parinaamon mein ruchi rakhate hain, to yah bhee dekhen:
 https://github.com/FireFather/sim03
 
 
-best regards-
+saabhaar-
 
 firefather@telenet.be
