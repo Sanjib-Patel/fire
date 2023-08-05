@@ -2,30 +2,30 @@
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/bitmaps/nnue-gui.png)
 
-**fire self-play nnue** (kod jald hee hindee mein upalabdh)
+**fire self-play nnue** (poora kod aur tippaniyaan jald hee hindee mein upalabdh hongee)
 
 ## features
-- c++20
-- windows & linux
-- uci
+- see++20
+- vindoz aur linaks
+- yooseeaee
 - 64-bit
-- smp (to 256 threads)
-- configurable hash (to 1024 GB)
-- ponder
-- multiPV
-- analysis (infinite) mode
-- chess960 (Fischer Random)
-- syzygy tablebases
-- adjustable contempt setting
-- fast perft & divide
-- bench (includes ttd time-to-depth calculation)
-- timestamped bench, perft, & divide log files
-- asychronous cout (acout) class using std::unique_lock<std::mutex>
-- uci option EngineMode random w/ uniform_real_distribution & mesenne_twister_engine
-- uses a unique NNUE (halfkp_256x2-32-32) evaluation
-- fast alpha-beta search
-- optional experimental MCTS-UCT search
- (Monte Carlo Tree Search w/ Upper Confidence Bounds Applied to Trees) pure/no minmax
+- esemapee (256 dhaage tak)
+- konfigar karane yogy haish (1024 jeebee tak)
+- vichaar karen
+- malteepeevee
+- vishleshan (anant) mod
+- shataranja960 (phishar raindam)
+- sizeejee tebalabes
+- samaayojy avamaanana ​​seting
+- tejee se poorn aur vibhaajit karen
+- bench (teeteedee samay-se-gaharaee ganana shaamil hai)
+- taimastaimpd bench, parft, aur divaid log failen
+- std::uniquai_lochk<std::mutaix> ka upayog karake esinkronas kout (achout) klaas
+- yooseeaee vikalp injanamod raindam w/uniform_raial_distribution & maisainnai_twistair_ainginai
+- ek adviteey nnuai (aadhaakp_256x2-32-32) moolyaankan ka upayog karata hai
+- tez alpha-beeta khoj
+- vaikalpik prayogaatmak emaseeteees-yooseetee khoj
+ (monte kaarlo tree sarch w/pedon par laagoo ooparee konphidens baunds) shuddh/koee nyoonatam adhikatam nahin
 
 **fire-9 is now available**
 
@@ -58,49 +58,49 @@ Games Completed = 16384 of 16384 (Avg game length = 12.627 sec)
 
 Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.epd(31526)
 
-## tools used:
+## upakaranon ka istemaal:
 
-- engine for generation of self-play games
+- sv-ple gems kee peedhee ke lie injan
   - fire 8.2 https://github.com/FireFather/fire-HCE
-- application to run self-play games
+- selph-ple gem chalaane ke lie eplikeshan
   - cutechess-cli https://github.com/cutechess/cutechess
-- application to obtain fen positions and evaluation data from pgn files & convert to plain text
-  - nnue-extract.exe from deeds tools https://outskirts.altervista.org/forum/viewtopic.php?t=2009
-- windows application for nnue training session management
+- peejeeen phailon se phen sthiti aur moolyaankan deta praapt karane aur saade paath mein parivartit karane ke lie aavedan
+  - karm upakaran se nnuai-aixtracht.aixai https://outskirts.altervista.org/forum/viewtopic.php?t=2009
+- enenayoo prashikshan satr prabandhan ke lie vindoz epleekeshan
   - nnue-gui https://github.com/FireFather/nnue-gui
-- optimized port of the original nodchip shogi neural network implementation
+- mool nodachip shogee nyooral netavark kaaryaanvayan ka anukoolit port
   - sf-nnue https://github.com/FireFather/sf-nnue-aio
-- application used by nnue-extract to extract fen positions and info from pgns
+- peejeeenes se phen kee sthiti aur jaanakaaree nikaalane ke lie enenayoo-eksatraikt dvaara upayog kiya jaane vaala eplikeshan
   - pgn-extract https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/
-- application for testing nnue vs nnue, etc.
+- enenayoo banaam enenayoo aadi ke pareekshan ke lie aavedan.
   - little blitzer http://www.kimiensoftware.com/software/chess/littleblitzer
-- utility for removing duplicate games from pgn files
+- peejeeen failon se dupliket gem hataane ke lie upayogita
   - chessbase 16 64-bit https://shop.chessbase.com/en/products/chessbase_16_fritz18_bundle
-- misc utilities: truncate.exe (opening book ply limitation) & gameSplit.exe (break up pgns to multiple parts)
+- vividh upayogitaen: trunatai.aixai (buk plaee seema kholana) aur gemasplit.aixai (peejeeen ko kaee bhaagon mein todana)
   - 40H-pgn tools http://40hchess.epizy.com/
 
 ## instructions to create an efficiently-updatable neural network (nnue) for any engine:
-- setting up a suitable Windows environment
+- ek upayukt vindoz vaataavaran sthaapit karana
   - [windows-environment.md](windows-environment.md)
-- creating an efficient opening book using cutechess-cli
+- ka upayog karake ek kushal praarambhik pustak banaana cutechess-cli
   - [cutechess-opening-books.md](cutechess-opening-books.md)
-- running selfplay games for a 'zero' nnue approach
+- shoony enenayoo drshtikon ke lie selphaple gem chalaana
   - [engine-selfplay-via-cutechess-cli.md](engine-selfplay-via-cutechess-cli.md)
-- using eval-extract to obtain fens & data from pgn files
+- peejeeen failon se fens aur deta praapt karane ke lie eeval-eksatraikt ka upayog karana
   - [nnue-extract_fen-&-data-extraction-&-conversion-to-plain-text.md](nnue-extract_fen-&-data-extraction-&-conversion-to-plain-text.md)
-- converting plain text data files to nnue .bin training format
+- saade paath deta failon ko nnuai .bin prashikshan praaroop mein parivartit karana
   - [plain-text-conversion-to-nnue-training-.bin-format.md](plain-text-conversion-to-nnue-training-.bin-format.md)
-- training & command-line management using nnue-gui
+- prashikshan evan kamaand-lain prabandhan ka upayog karana nnue-gui
   - [create-a-nnue-with-nnue-gui.md](create-a-nnue-with-nnue-gui.md)
-- testing the generated nnues
+- utpann ka pareekshan nnues
   - [version-testing-with-little-blitzer.md](version-testing-with-little-blitzer.md)
-- improving the NNUE with supervised & reinforcement learning
+- paryavekshit aur sudrdheekaran seekhane ke saath sudhaar karana
   - [improving-the-nnue.md](improving-the-nnue.md)
 
 ## monte-carlo search mode:  
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/Fire_8.NN.MCx64.png)
 
-fire-9 has undergone months of meticulous analysis and refactoring using many of the most modern C++ tools available today, including Clang, ReSharper C++, and Visual Studio Code Analysis, ensuring the production of extremely fast highly optimized and stable executables.
+phaayar-9 mein klaing, reeshaarpar see++ aur vijual stoodiyo kod enaalisis sahit aaj upalabdh kaee sabase aadhunik see++ tools ka upayog karake kaee maheenon tak saavadhaaneepoorvak vishleshan aur reephaiktaring kee gaee hai, jisase behad tej, uchch anukoolit aur sthir nishpaadan yogy ka utpaadan sunishchit hota hai.
 
 ## available Windows binaries
 - **x64 bmi2** = fast pgo binary (for modern 64-bit systems w/ BMI2 instruction set) if you own a Intel Haswell or newer cpu, this compile should be faster.
