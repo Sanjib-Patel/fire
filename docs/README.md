@@ -5,7 +5,7 @@
 **fire self-play nnue** (poora kod aur tippaniyaan jald hee hindee mein upalabdh hongee)
 
 ## visheshataen
-- see++20
+- c++20
 - vindoz aur linaks
 - yooseeaee
 - 64-bit
