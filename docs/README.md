@@ -9,7 +9,6 @@
   <br>
   <br>
 
-  
   [![Release][release-badge]][release-link]
   [![Commits][commits-badge]][commits-link]
 
