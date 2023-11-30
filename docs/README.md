@@ -19,53 +19,14 @@
 - uci
 - 64-bit
 - smp (to 256 threads)
-- configurable hash (to 1024 GB)
+- alpha-beta search
+- hash (to 1024 GB)
 - ponder
 - multiPV
-- analysis (infinite) mode
 - chess960 (Fischer Random)
-- syzygy tablebases
-- adjustable contempt setting
-- fast perft & divide
-- bench (includes ttd time-to-depth calculation)
-- timestamped bench, perft, & divide log files
+- bench, perft & divide
 - asychronous cout (acout) class using std::unique_lock<std::mutex>
-- uci option EngineMode random w/ uniform_real_distribution & mesenne_twister_engine
-- uses a unique NNUE (halfkp_256x2-32-32) evaluation
-- fast alpha-beta search
-- optional experimental MCTS-UCT search
- (Monte Carlo Tree Search w/ Upper Confidence Bounds Applied to Trees) pure/no minmax
-
-**fire-9 test results**
-
-|                                       |    |       |                    |      |
-| ------------------------------------- |--- | ----- | ------------------ | ---- |
-|                                       |    | games |(+win, =draw, -loss)| (%)  |
-|    fire-9_x64_bmi2  			|3460| 16384 | (+5968,=4937,-5479)|51.5 %|
-|    vs.                                |     |      |                    |      |
-|    stockfish-15                 	|3861|   863 | (+715,=135,-13)    |90.7 %|
-|    komodo-dragon-3.1           	|3838|   863 | (+702,=141,-20)    |89.5 %|
-|    berserk-9                   	|3754|   863 | (+631,=190,-42)    |84.1 %|
-|    koivisto_8.0                 	|3637|   863 | (+501,=261,-101)   |73.2 %|
-|    rubiChess-20220813          	|3564|   863 | (+386,=338,-139)   |64.3 %|
-|    seer-v2.5                    	|3504|   862 | (+322,=324,-216)   |56.1 %|
-|    rofChade-3.0                 	|3492|   862 | (+302,=336,-224)   |54.5 %|
-|    slow64-2.9                   	|3452|   863 | (+254,=336,-273)   |48.9 %|
-|    rebel-15.1                   	|3450|   862 | (+245,=348,-269)   |48.6 %|
-|    wasp-6.00                   	|3395|   862 | (+207,=291,-364)   |40.9 %|
-|    fire-8242022                	|3384|   862 | (+195,=290,-377)   |39.4 %|
-|    nemorino-6.00                	|3374|   862 | (+156,=344,-362)   |38.1 %|
-|    igel-3.1.0                   	|3334|   862 | (+122,=323,-417)   |32.9 %|
-|    ethereal-12.75              	|3331|   862 | (+158,=244,-460)   |32.5 %|
-|    clover-3.1                   	|3296|   862 | (+147,=194,-521)   |28.3 %|
-|    minic-3.24                   	|3290|   862 | (+106,=264,-492)   |27.6 %|
-|    xiphos-0.6                   	|3266|   862 | (+124,=184,-554)   |25.1 %|
-|    tucano-10.00                 	|3266|   862 | (+99,=234,-529)    |25.1 %|
-|    marvin-6.0.0                 	|3233|   862 | (+107,=160,-595)   |21.7 %|
-
-Games Completed = 16384 of 16384 (Avg game length = 12.627 sec)
-
-Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.epd(31526)
+- unique NNUE (halfkp_256x2-32-32) evaluation
 
 ## tools used:
 
