@@ -214,8 +214,6 @@ best regards-
 
 firefather@telenet.be
 
-[![Github All Releases](https://img.shields.io/github/downloads//FireFather/fire/total.svg)]()
-[downloads-badge]:https://img.shields.io/github/downloads/FireFather/fire/total.svg)
 [license-badge]:https://img.shields.io/github/license/FireFather/fire?style=for-the-badge&label=license&color=success
 [license-link]:https://github.com/FireFather/fire/blob/main/LICENSE
 [release-badge]:https://img.shields.io/github/v/release/FireFather/fire?style=for-the-badge&label=official%20release
