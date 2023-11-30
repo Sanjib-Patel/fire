@@ -12,7 +12,6 @@
  
 </div>
 
-
 ## features
 - c++20
 - windows & linux
@@ -39,16 +38,29 @@
 - **Clear Hash** clear the hash table. delete allocated memory and re-initialize.
 
 ## binaries
-- **x64 bmi2** = fast pgo binary (for modern 64-bit systems w/ BMI2 instruction set) if you own a Intel Haswell or newer cpu, this compile should be faster.
-- **x64 avx2** = fast pgo binary (for modern 64-bit systems w/ AVX2 instruction set) if you own a modern AMD cpu, this compile should be the fastest.
+- **x64 bmi2** = fast pgo binary (for modern 64-bit systems w/ BMI2 instruction set) if you own a modern Intel cpu (Haswell or newer), use this compile.
+- **x64 avx2** = fast pgo binary (for modern 64-bit systems w/ AVX2 instruction set) if you own a modern AMD cpu, use this compile.
 
 ## compile it
 - **windows** (visual studio) use included project files: Fire.vcxproj or Fire.sln
 - **minGW** run one of the included shell scripts: make_bmi2.sh, make_avx2.sh, or make_all.sh 
 - **ubuntu** type 'make profile-build ARCH=x86-64-bmi2', 'make profile-build ARCH=x86-64-avx2', etc.
-- 
-please see **http://chesslogik.wix.com/fire** for more info
 
+## ultra-fast testing
+http://www.chessdom.com/fire-the-chess-engine-releases-a-new-version/
+
+## acknowledgements
+- [Chess Programming Wiki](https://www.chessprogramming.org)
+- [Stockfish](https://github.com/official-stockfish/Stockfish)
+- [Ippolit](https://github.com/FireFather/ippolit)
+- [Robbolito](https://github.com/FireFather/robbolito)
+- [Firebird](https://github.com/FireFather/firebird)
+- [Ivanhoe](https://www.chessprogramming.org/IvanHoe)
+- [Houdini](https://www.cruxis.com/chess/houdini.htm)
+- [Gull](https://github.com/FireFather/seagull)
+- [nnue-probe](https://github.com/dshawul/nnue-probe/)
+
+## banners
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_1.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_2.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_3.bmp)
@@ -61,25 +73,8 @@ please see **http://chesslogik.wix.com/fire** for more info
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_10.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/logos/fire_11.bmp)
 
-## acknowledgements
-
-- [Chess Programming Wiki](https://www.chessprogramming.org)
-- [Stockfish](https://github.com/official-stockfish/Stockfish)
-- [Ippolit](https://github.com/FireFather/ippolit)
-- [Robbolito](https://github.com/FireFather/robbolito)
-- [Firebird](https://github.com/FireFather/firebird)
-- [Ivanhoe](https://www.chessprogramming.org/IvanHoe)
-- [Houdini](https://www.cruxis.com/chess/houdini.htm)
-- [Gull](https://github.com/FireFather/seagull)
-- [nnue-probe](https://github.com/dshawul/nnue-probe/)
-
-## ultra-fast testing methodology:
-http://www.chessdom.com/fire-the-chess-engine-releases-a-new-version/
-
-## license
-Fire is distributed under the GNU General Public License. Please read LICENSE for more information.
-
-please see **http://chesslogik.wix.com/fire** for more info
+## more info
+**http://chesslogik.wix.com/fire**
 
 [license-badge]:https://img.shields.io/github/license/FireFather/fire?style=for-the-badge&label=license&color=success
 [license-link]:https://github.com/FireFather/fire/blob/main/LICENSE
