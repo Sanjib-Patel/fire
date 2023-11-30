@@ -1,17 +1,17 @@
 # fire
 
 ![alt tag](https://raw.githubusercontent.com/FireFather/fire-zero/master/bitmaps/nnue-gui.png)
-
-**fire self-play nnue**
-
 <div align="left">
-
   <br>
 
   [![Release][release-badge]][release-link]
   [![Commits][commits-badge]][commits-link]
 
+  ![Downloads][downloads-badge]
+  [![License][license-badge]][license-link]
+ 
 </div>
+
 
 ## features
 - c++20
@@ -218,3 +218,11 @@ firefather@telenet.be
 [commits-badge]:https://img.shields.io/github/commits-since/FireFather/fire/latest?style=for-the-badge
 [commits-link]:https://github.com/FireFather/fire/commits/main
 
+[downloads-badge]:https://img.shields.io/github/downloads/Sidhant-Roymoulik/Lux/total?color=success&style=for-the-badge
+
+[license-badge]:https://img.shields.io/github/license/Sidhant-Roymoulik/Lux?style=for-the-badge&label=license&color=success
+[license-link]:https://github.com/Sidhant-Roymoulik/Lux/blob/main/LICENSE
+[release-badge]:https://img.shields.io/github/v/release/Sidhant-Roymoulik/Lux?style=for-the-badge&label=official%20release
+[release-link]:https://github.com/Sidhant-Roymoulik/Lux/releases/latest
+[commits-badge]:https://img.shields.io/github/commits-since/Sidhant-Roymoulik/Lux/latest?style=for-the-badge
+[commits-link]:https://github.com/Sidhant-Roymoulik/Lux/commits/main
