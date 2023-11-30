@@ -8,9 +8,6 @@
 
   <br>
   <br>
-  <b><i>UCI-Compatible Chess Engine Built in C++</i></b>
-  <br>
-  <br>
   ![Downloads][downloads-badge]
   [![License][license-badge]][license-link]
   
