@@ -4,7 +4,7 @@
 
 **fire self-play nnue**
 
-<div align="center">
+<div align="left">
 
   <br>
   <br>
