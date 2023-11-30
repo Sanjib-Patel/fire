@@ -8,8 +8,7 @@
 
   <br>
   <br>
-  ![Downloads][downloads-badge]
-  [![License][license-badge]][license-link]
+
   
   [![Release][release-badge]][release-link]
   [![Commits][commits-badge]][commits-link]
