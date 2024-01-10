@@ -138,17 +138,17 @@ krpaya dekhen **http://chesslogik.wix.com/fire** adhik jaanakaaree ke lie
 - **SyzygyPath** syzygy tebalabes failon ka path.
 
 
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_1.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_2.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_3.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_4.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_5.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_6.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_7.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_8.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_9.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_10.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/bitmaps/fire_11.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_1.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_2.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_3.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_4.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_5.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_6.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_7.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_8.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_9.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_10.bmp)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/logos/fire_11.bmp)
 
 ## aabhaar
 
