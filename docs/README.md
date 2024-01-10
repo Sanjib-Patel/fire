@@ -188,7 +188,7 @@ krpaya dekhen **http://chesslogik.wix.com/fire** adhik jaanakaaree ke lie
 ## kya aag stockfish kee tarah khelatee hai?
 nahin, yahaan parinaam hain Don Daily's SIM kaaryakram (difolt maan) ko maapane ke lie aaj Fire 8.NN chayan banaam pichhale 4 sanskaranon ko sthaanaantarit karen Stockfish:
 
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/matrix.png)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/docs/matrix.png)
 
 Aaap dekh sakate hain ki stockfish 14.1 aur stockfish 15 ~64% samay mein samaan chaal chalate hain (dekhana pankti 4, kolam 5)
 
