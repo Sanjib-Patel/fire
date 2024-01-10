@@ -100,7 +100,7 @@ Settings = Gauntlet/32MB/1000ms+100ms/M 500cp for 6 moves, D 120 moves/EPD:book.
   - [improving-the-nnue.md](improving-the-nnue.md)
 
 ## monte-carlo khoj mod:  
-![alt tag](https://raw.githubusercontent.com/FireFather/fire/master/docs/Fire_8.NN.MCx64.png)
+![alt tag](https://raw.githubusercontent.com/Sanjib-Patel/fire/main/docs/Fire_8.NN.MCx64.png)
 
 phaayar-9 mein klaing, reeshaarpar see++ aur vijual stoodiyo kod enaalisis sahit aaj upalabdh kaee sabase aadhunik see++ tools ka upayog karake kaee maheenon tak saavadhaaneepoorvak vishleshan aur reephaiktaring kee gaee hai, jisase behad tej, uchch anukoolit aur sthir nishpaadan yogy ka utpaadan sunishchit hota hai.
 
